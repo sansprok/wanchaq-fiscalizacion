@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AUXWANCHAQ" Class="ValoresDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=AUXWANCHAQ;Integrated Security=True" SettingsObjectName="SISCONVAL.Properties.Settings" SettingsPropertyName="AUXWANCHAQConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ESTADORD" Member="ESTADORD">
+    <Type Name="ESTADORD">
+      <Column Name="facodestadord" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="fadesestado" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NOTIFICADOR" Member="NOTIFICADOR">
+    <Type Name="NOTIFICADOR">
+      <Column Name="FACODNOTI" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FANOMNOTR" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FANOMCORT" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VALORESDET" Member="VALORESDET">
+    <Type Name="VALORESDET">
+      <Column Name="FAANIORESOLUCION" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="FNNRORESOLUCION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FAANIOTRIBU" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="FAIDCIUDADANO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FAAPELLIDOSYNOMBRES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FADIRECCION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FNBASEIMPDEC" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FNBASEIMPFISC" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FNINSOLUTODEC" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FNINSOLUTOFISC" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FNIMPPAGADO" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FNIMPPENDIENTE" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FNFACTOR" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FNTIM" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FNMORA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FNGASADMIN" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FNTOTALRD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FAESTADORD" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FDFECHAGENERACION" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VALORESGEN" Member="VALORESGEN">
+    <Type Name="VALORESGEN">
+      <Column Name="FAANIORESOLUCION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FATRIBUTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FNNRORESOLUCION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FAIDCIUDADANO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FAAPELLIDOSYNOMBRES" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FADIRECCION" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FAREFERENCIA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FACODSECTOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FAESTADOVALOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FMOBSERVACION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FADESDE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FAHASTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FDFECHAEMISION" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FDFECHANOTIF" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FDFECHAVENCI" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FDFECHAENVIO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FDFECHAMODIF" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FNIDNOTIFICADOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FNBASEIMPONIBLE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FNTOTALVALOR" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.PA_CONTROLDEUDA_MODIFICARVALORCAB" Method="PA_CONTROLDEUDA_MODIFICARVALORCAB">
+    <Parameter Name="FAANIORESOLUCION" Parameter="fAANIORESOLUCION" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNNRORESOLUCION" Parameter="fNNRORESOLUCION" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FAESTADOVALOR" Parameter="fAESTADOVALOR" Type="System.String" DbType="NVarChar(1)" />
+    <Parameter Name="FMOBSERVACION" Parameter="fMOBSERVACION" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="FDFECHANOTIF" Parameter="fDFECHANOTIF" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FDFECHAVENCI" Parameter="fDFECHAVENCI" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FNIDNOTIFICADOR" Parameter="fNIDNOTIFICADOR" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
