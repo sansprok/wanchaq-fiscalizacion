@@ -42,7 +42,7 @@ namespace SISCONVAL
     #endregion
 		
 		public ValoresDataContext() : 
-				base(global::SISCONVAL.Properties.Settings.Default.AUXWANCHAQConnectionString2, mappingSource)
+				base(global::SISCONVAL.Properties.Settings.Default.AUXWANCHAQConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

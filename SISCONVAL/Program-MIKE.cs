@@ -20,8 +20,8 @@ namespace SISCONVAL
             // Application.Run(new frmControlDeuda());
             //Application.Run(new frmCoactivaControl());
             // Application.Run(new frmResolucion());
-            Application.Run(new frmGenerarRDByCodigo());
-           // Application.Run(new frmGenerarRDByCodigo("00005511z", "2019","MPRADO"));
+            //Application.Run(new frmGenerarRDByCodigo());
+           Application.Run(new frmGenerarRDByCodigo("00077929m", "2020", "hrojasz"));
             //Application.Run(new FrmReportCrisResolucionIniciocs(1700, "00002295H","1"));
         }
     }
