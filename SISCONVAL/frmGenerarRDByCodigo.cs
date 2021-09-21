@@ -13,23 +13,24 @@ namespace SISCONVAL
 {
     public partial class frmGenerarRDByCodigo : Form
     {
+
         string pIdCiudadano;
         string pAnioTribu;
         string pOperador;
         ValoresDataContext BD = new ValoresDataContext();
         //public frmGenerarRDByCodigo(string IdCiudadano, string AnioTribu)
         //public frmGenerarRDByCodigo(string IDCIUDADANO, string ANIOTRIBUTO, string OPERADOR)
-        public frmGenerarRDByCodigo()
+        public frmGenerarRDByCodigo(string IDCIUDADANO, string ANIOTRIBU, string OPERADOR)
         {
             /*recuperando parametros externos*/
-            string[] passeid = Environment.GetCommandLineArgs();
-            pIdCiudadano = passeid.GetValue(1).ToString();
+          //  string[] passeid = Environment.GetCommandLineArgs();
+         /*   pIdCiudadano = passeid.GetValue(1).ToString();
             pAnioTribu = passeid.GetValue(2).ToString();
-            pOperador = passeid.GetValue(3).ToString();
+            pOperador = passeid.GetValue(3).ToString();*/
 
-           /* pIdCiudadano = IDCIUDADANO;
-            pAnioTribu = ANIOTRIBUTO;
-            pOperador = OPERADOR;*/
+            pIdCiudadano = IDCIUDADANO;
+            pAnioTribu = ANIOTRIBU;
+            pOperador = OPERADOR;
             
 
             InitializeComponent();
@@ -194,8 +195,8 @@ namespace SISCONVAL
 
         private void btnImprimirRD_Click(object sender, EventArgs e)
         {
-            frmListaRDs listaRds = new frmListaRDs(lblCiudadano.Text, pOperador);
-            listaRds.ShowDialog();
+          /*  frmListaRDs listaRds = new frmListaRDs(lblCiudadano.Text, pOperador);
+            listaRds.ShowDialog();*/
         }
 
         

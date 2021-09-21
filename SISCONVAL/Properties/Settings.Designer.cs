@@ -12,7 +12,7 @@ namespace SISCONVAL.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,7 +26,8 @@ namespace SISCONVAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=AUXWANCHAQ;User ID=sa;Password=Server2010")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mdwserver\\SQLMDW28;Initial Catalog=AUXWANCHAQ;User ID=sa;Password=wan" +
+            "chaqsql-2013")]
         public string AUXWANCHAQConnectionString {
             get {
                 return ((string)(this["AUXWANCHAQConnectionString"]));
@@ -36,8 +37,8 @@ namespace SISCONVAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=AUXWANCHAQ;Persist Security Info=True;User ID=sa;Pa" +
-            "ssword=Server2010")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mdwserver\\SQLMDW28;Initial Catalog=AUXWANCHAQ;Persist Security Info=T" +
+            "rue;User ID=sa;Password=wanchaqsql-2013")]
         public string AUXWANCHAQConnectionString1 {
             get {
                 return ((string)(this["AUXWANCHAQConnectionString1"]));
@@ -47,10 +48,22 @@ namespace SISCONVAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=AUXWANCHAQ;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mdwserver\\SQLMDW28;Initial Catalog=AUXWANCHAQ;Persist Security Info=T" +
+            "rue;User ID=sa;Password=wanchaqsql-2013")]
         public string AUXWANCHAQConnectionString2 {
             get {
                 return ((string)(this["AUXWANCHAQConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.28\\SQLMDW28;Initial Catalog=AUXWANCHAQ;Persist Security Inf" +
+            "o=True;User ID=sa;Password=wanchaqsql-2013")]
+        public string AUXWANCHAQConnectionString3 {
+            get {
+                return ((string)(this["AUXWANCHAQConnectionString3"]));
             }
         }
     }

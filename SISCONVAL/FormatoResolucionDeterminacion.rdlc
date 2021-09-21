@@ -2064,7 +2064,7 @@
     <Height>7.58123in</Height>
     <Style />
   </Body>
-  <Width>7.02851in</Width>
+  <Width>7.0285in</Width>
   <Page>
     <PageHeader>
       <Height>2.516cm</Height>
@@ -2083,7 +2083,7 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox1">
+        <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -2106,13 +2106,25 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>"Año de la lucha contra la Corrupción e Impunidad"</Value>
+                  <Value>"</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Switch(Fields!FAANIORESOLUCION.Value= 2019,"Año de la lucha contra la Corrupción e Impunidad",Fields!FAANIORESOLUCION.Value= 2020,"Año de la Universalización de la Salud",Fields!FAANIORESOLUCION.Value= 2021,"Año del Bicentenario del Perú: 200 años de Independencia" )</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>14pt</FontSize>
+                    <FontSize>11pt</FontSize>
                     <FontWeight>Normal</FontWeight>
-                    <TextDecoration>None</TextDecoration>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>"</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2121,11 +2133,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.79587cm</Top>
-          <Left>4.05553cm</Left>
-          <Height>1.21383cm</Height>
-          <Width>11.30534cm</Width>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0.75734cm</Top>
+          <Left>3.83539cm</Left>
+          <Height>1.42021cm</Height>
+          <Width>12.25311cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

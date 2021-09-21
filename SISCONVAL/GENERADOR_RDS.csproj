@@ -107,6 +107,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_VALORES.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmActualizarMoraFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActualizarMoraFecha.Designer.cs">
+      <DependentUpon>frmActualizarMoraFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFiltroActualizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     </Compile>
     <Compile Include="frmListaRDs.Designer.cs">
       <DependentUpon>frmListaRDs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmObservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObservaciones.Designer.cs">
+      <DependentUpon>frmObservaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReporteResolucion.cs">
       <SubType>Form</SubType>
@@ -144,6 +156,9 @@
       <DependentUpon>Valores.dbml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormatoResolucionDeterminacion.rdlc" />
+    <EmbeddedResource Include="frmActualizarMoraFecha.resx">
+      <DependentUpon>frmActualizarMoraFecha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFiltroActualizacion.resx">
       <DependentUpon>frmFiltroActualizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaRDs.resx">
       <DependentUpon>frmListaRDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmObservaciones.resx">
+      <DependentUpon>frmObservaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteResolucion.resx">
       <DependentUpon>frmReporteResolucion.cs</DependentUpon>
@@ -215,8 +233,6 @@
     <Content Include="Imagenes\01_arrow_left-256.png" />
     <Content Include="Imagenes\DELETE.png" />
     <Content Include="Imagenes\SALIR.png" />
-    <None Include="Resources\alerta.png" />
-    <None Include="Resources\alerta x70.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -230,6 +246,8 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\alerta.png" />
+    <None Include="Resources\alerta x70.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
