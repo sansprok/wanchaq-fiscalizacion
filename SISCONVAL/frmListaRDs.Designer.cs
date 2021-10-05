@@ -133,14 +133,14 @@
             // aHoyDiaToolStripMenuItem
             // 
             this.aHoyDiaToolStripMenuItem.Name = "aHoyDiaToolStripMenuItem";
-            this.aHoyDiaToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.aHoyDiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aHoyDiaToolStripMenuItem.Text = "Periodos";
             this.aHoyDiaToolStripMenuItem.Click += new System.EventHandler(this.aHoyDiaToolStripMenuItem_Click);
             // 
             // aFechaToolStripMenuItem
             // 
             this.aFechaToolStripMenuItem.Name = "aFechaToolStripMenuItem";
-            this.aFechaToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.aFechaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aFechaToolStripMenuItem.Text = "A una Fecha";
             this.aFechaToolStripMenuItem.Click += new System.EventHandler(this.aFechaToolStripMenuItem_Click);
             // 

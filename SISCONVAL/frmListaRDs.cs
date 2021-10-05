@@ -102,30 +102,29 @@ namespace SISCONVAL
 
         private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
-            DialogResult dr = MessageBox.Show("SE MODIFICARAN LOS DATOS DE LA RESOLUCION, DESEA ACTUALIZAR ?",
-                   "Advertecia", MessageBoxButtons.YesNo);
+            
+            DialogResult dr = MessageBox.Show("SE MODIFICARAN LOS DATOS DE LA RESOLUCION, DESEA ACTUALIZAR ?", "Advertecia", MessageBoxButtons.YesNo);
             switch (dr)
             {
                 case DialogResult.Yes:
-                    var Resolucion = from R in bdvalores.VALORESGEN where R.FNNRORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Numero"].Value.ToString()) && R.FAANIORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Anio"].Value.ToString()) select R;
+                    var Resolucionaux = from R in bdvalores.VALORESGEN where R.FNNRORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Numero"].Value.ToString()) && R.FAANIORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Anio"].Value.ToString()) select R;
 
-                    int NroResolucion = int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Numero"].Value.ToString());
-                    string Idciudadano = Resolucion.First().FAIDCIUDADANO;
-                    int AnioResolucion = int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Anio"].Value.ToString());
-                    string Operador = pOperador;
-                    int Desde = Resolucion.First().FADESDE;
-                    int Hasta = int.Parse(Resolucion.First().FAHASTA.ToString());
+                    int NroResolucionaux = int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Numero"].Value.ToString());
+                    string Idciudadanoaux= Resolucionaux.First().FAIDCIUDADANO;
+                    int AnioResolucionaux = int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Anio"].Value.ToString());
+                    string Operadoraux = pOperador;
+                    int Desdeaux = Resolucionaux.First().FADESDE;
+                    int Hastaaux = int.Parse(Resolucionaux.First().FAHASTA.ToString());
 
 
-                    bdvalores.PA_CONTROLDEUDA_ACTUALIZARVALOR_INDIVIDUAL(AnioResolucion, Idciudadano, NroResolucion, Operador, Desde, Hasta);
+                    bdvalores.PA_CONTROLDEUDA_ACTUALIZARVALOR_INDIVIDUAL(AnioResolucionaux, Idciudadanoaux, NroResolucionaux, Operadoraux, Desdeaux, Hastaaux);
                     break;
                 case DialogResult.No:
 
                     break;
             }
-            */
-           /* var Resolucion = from R in bdvalores.VALORESGEN where R.FNNRORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Numero"].Value.ToString()) && R.FAANIORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Anio"].Value.ToString()) select R;
+            
+            var Resolucion = from R in bdvalores.VALORESGEN where R.FNNRORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Numero"].Value.ToString()) && R.FAANIORESOLUCION == int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Anio"].Value.ToString()) select R;
 
             int NroResolucion = int.Parse(dgvListaRds.Rows[dgvListaRds.CurrentRow.Index].Cells["Numero"].Value.ToString());
             string Idciudadano = Resolucion.First().FAIDCIUDADANO;
@@ -135,7 +134,7 @@ namespace SISCONVAL
             int Hasta = int.Parse(Resolucion.First().FAHASTA.ToString());
             frmFiltroActualizacion filtro = new frmFiltroActualizacion(Desde, Hasta,NroResolucion, AnioResolucion, Operador, Idciudadano);
             filtro.ShowDialog();
-           */
+           
            
         }
 
