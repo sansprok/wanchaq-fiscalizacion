@@ -66,5 +66,16 @@ namespace SISCONVAL.Properties {
                 return ((string)(this["AUXWANCHAQConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.28\\SQLMDW28;Initial Catalog=SIRecupera;Persist Security Inf" +
+            "o=True;User ID=sa;Password=wanchaqsql-2013")]
+        public string SIRecuperaConnectionString {
+            get {
+                return ((string)(this["SIRecuperaConnectionString"]));
+            }
+        }
     }
 }

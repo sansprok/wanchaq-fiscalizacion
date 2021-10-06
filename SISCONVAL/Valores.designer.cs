@@ -202,6 +202,20 @@ namespace SISCONVAL
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fAANIOVALOR, fNNROVALOR, fAIDCIUDADANO, fATIPOVALOR, fMOBSERVACION, fAOPERADOR);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.PA_CONTROLDEUDA_PRESCRIPCION")]
+		public int PA_CONTROLDEUDA_PRESCRIPCION([global::System.Data.Linq.Mapping.ParameterAttribute(Name="FAIDCIUDADANO", DbType="VarChar(9)")] string fAIDCIUDADANO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FAIDCONCEPTO", DbType="VarChar(2)")] string fAIDCONCEPTO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FNANIODESDE", DbType="Int")] System.Nullable<int> fNANIODESDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FNANIOHASTA", DbType="Int")] System.Nullable<int> fNANIOHASTA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FAOPERADOR", DbType="VarChar(20)")] string fAOPERADOR)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fAIDCIUDADANO, fAIDCONCEPTO, fNANIODESDE, fNANIOHASTA, fAOPERADOR);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.PA_CONTROLDEUDA_PRESCRIPCION_VER")]
+		public ISingleResult<PA_CONTROLDEUDA_PRESCRIPCION_VERResult> PA_CONTROLDEUDA_PRESCRIPCION_VER([global::System.Data.Linq.Mapping.ParameterAttribute(Name="FAIDCIUDADANO", DbType="VarChar(9)")] string fAIDCIUDADANO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FAIDCONCEPTO", DbType="VarChar(2)")] string fAIDCONCEPTO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FNANIODESDE", DbType="Int")] System.Nullable<int> fNANIODESDE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FNANIOHASTA", DbType="Int")] System.Nullable<int> fNANIOHASTA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FAOPERADOR", DbType="VarChar(20)")] string fAOPERADOR)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fAIDCIUDADANO, fAIDCONCEPTO, fNANIODESDE, fNANIOHASTA, fAOPERADOR);
+			return ((ISingleResult<PA_CONTROLDEUDA_PRESCRIPCION_VERResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NOTIFICADOR")]
@@ -3287,6 +3301,176 @@ namespace SISCONVAL
 				if ((this._FDFECHAMODIF != value))
 				{
 					this._FDFECHAMODIF = value;
+				}
+			}
+		}
+	}
+	
+	public partial class PA_CONTROLDEUDA_PRESCRIPCION_VERResult
+	{
+		
+		private int _IdDeuda;
+		
+		private string _IdCiudadano;
+		
+		private string _IdConcepto;
+		
+		private System.Nullable<decimal> _Deuda;
+		
+		private System.Nullable<decimal> _Pagado;
+		
+		private System.Nullable<decimal> _Saldo;
+		
+		private System.Nullable<bool> _Coactiva;
+		
+		private string _Estado;
+		
+		private string _IdUsuario;
+		
+		public PA_CONTROLDEUDA_PRESCRIPCION_VERResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdDeuda", DbType="Int NOT NULL")]
+		public int IdDeuda
+		{
+			get
+			{
+				return this._IdDeuda;
+			}
+			set
+			{
+				if ((this._IdDeuda != value))
+				{
+					this._IdDeuda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCiudadano", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		public string IdCiudadano
+		{
+			get
+			{
+				return this._IdCiudadano;
+			}
+			set
+			{
+				if ((this._IdCiudadano != value))
+				{
+					this._IdCiudadano = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdConcepto", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		public string IdConcepto
+		{
+			get
+			{
+				return this._IdConcepto;
+			}
+			set
+			{
+				if ((this._IdConcepto != value))
+				{
+					this._IdConcepto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deuda", DbType="Money")]
+		public System.Nullable<decimal> Deuda
+		{
+			get
+			{
+				return this._Deuda;
+			}
+			set
+			{
+				if ((this._Deuda != value))
+				{
+					this._Deuda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pagado", DbType="Money")]
+		public System.Nullable<decimal> Pagado
+		{
+			get
+			{
+				return this._Pagado;
+			}
+			set
+			{
+				if ((this._Pagado != value))
+				{
+					this._Pagado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Saldo", DbType="Money")]
+		public System.Nullable<decimal> Saldo
+		{
+			get
+			{
+				return this._Saldo;
+			}
+			set
+			{
+				if ((this._Saldo != value))
+				{
+					this._Saldo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Coactiva", DbType="Bit")]
+		public System.Nullable<bool> Coactiva
+		{
+			get
+			{
+				return this._Coactiva;
+			}
+			set
+			{
+				if ((this._Coactiva != value))
+				{
+					this._Coactiva = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		public string Estado
+		{
+			get
+			{
+				return this._Estado;
+			}
+			set
+			{
+				if ((this._Estado != value))
+				{
+					this._Estado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUsuario", DbType="NChar(15) NOT NULL", CanBeNull=false)]
+		public string IdUsuario
+		{
+			get
+			{
+				return this._IdUsuario;
+			}
+			set
+			{
+				if ((this._IdUsuario != value))
+				{
+					this._IdUsuario = value;
 				}
 			}
 		}

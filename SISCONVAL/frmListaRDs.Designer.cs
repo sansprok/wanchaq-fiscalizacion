@@ -52,8 +52,10 @@
             this.lblAlerta3 = new System.Windows.Forms.Label();
             this.lblAlerta2 = new System.Windows.Forms.Label();
             this.lblAlerta1 = new System.Windows.Forms.Label();
-            this.btnAlerta = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.prescribirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAlerta = new System.Windows.Forms.Button();
+            this.pRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaRds)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,7 +89,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
             this.anularToolStripMenuItem,
-            this.actualizarToolStripMenuItem});
+            this.actualizarToolStripMenuItem,
+            this.pRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -105,7 +108,8 @@
             // anularToolStripMenuItem
             // 
             this.anularToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anularRDToolStripMenuItem});
+            this.anularRDToolStripMenuItem,
+            this.prescribirToolStripMenuItem});
             this.anularToolStripMenuItem.Name = "anularToolStripMenuItem";
             this.anularToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.anularToolStripMenuItem.Text = "Anular";
@@ -293,6 +297,17 @@
             this.lblAlerta1.Text = "label1";
             this.lblAlerta1.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // prescribirToolStripMenuItem
+            // 
+            this.prescribirToolStripMenuItem.Name = "prescribirToolStripMenuItem";
+            this.prescribirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prescribirToolStripMenuItem.Text = "Prescribir";
+            this.prescribirToolStripMenuItem.Click += new System.EventHandler(this.prescribirToolStripMenuItem_Click);
+            // 
             // btnAlerta
             // 
             this.btnAlerta.BackColor = System.Drawing.Color.White;
@@ -305,9 +320,12 @@
             this.btnAlerta.UseVisualStyleBackColor = false;
             this.btnAlerta.Visible = false;
             // 
-            // timer1
+            // pRToolStripMenuItem
             // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.pRToolStripMenuItem.Name = "pRToolStripMenuItem";
+            this.pRToolStripMenuItem.Size = new System.Drawing.Size(33, 20);
+            this.pRToolStripMenuItem.Text = "PR";
+            this.pRToolStripMenuItem.Click += new System.EventHandler(this.pRToolStripMenuItem_Click);
             // 
             // frmListaRDs
             // 
@@ -369,5 +387,7 @@
         private System.Windows.Forms.Label lblAlerta4;
         private System.Windows.Forms.Label lblAlerta3;
         private System.Windows.Forms.ToolStripMenuItem anularRDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prescribirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pRToolStripMenuItem;
     }
 }

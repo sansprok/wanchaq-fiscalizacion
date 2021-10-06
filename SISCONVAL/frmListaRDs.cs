@@ -15,17 +15,19 @@ namespace SISCONVAL
         ValoresDataContext bdvalores = new ValoresDataContext();
         string pIdCiudadano;
         string pOperador;
+        string pAnioTribu;
         private int _ticks;
         public frmListaRDs()
         {
             string[] passeid = Environment.GetCommandLineArgs();
-             pIdCiudadano = passeid.GetValue(1).ToString();
-             pOperador = passeid.GetValue(2).ToString();
-          /* pIdCiudadano = "00146204Q";
-             pOperador = "mccarhuas";**/
-            
+            pIdCiudadano = passeid.GetValue(1).ToString();
+            pAnioTribu = passeid.GetValue(2).ToString();
+            pOperador = passeid.GetValue(3).ToString();
+            /*pIdCiudadano = "00006768y";
+            pOperador = "dvilcahuamanl";*/
+
             InitializeComponent();
-            if (pOperador == "mccarhuas")
+            if (pOperador == "mccarhuas" )
             {
                 anularToolStripMenuItem.Visible = true;
                 anularToolStripMenuItem.Enabled = true;
@@ -39,6 +41,11 @@ namespace SISCONVAL
                 anularToolStripMenuItem.Enabled = false;
                 anularRDToolStripMenuItem.Enabled = false;
                 anularRDToolStripMenuItem.Enabled = false;
+            }
+            if (pOperador.Replace(" ","") == "dvilcahuamanl")
+            {
+                pRToolStripMenuItem.Enabled = true;
+
             }
 
             //dgvListaRds.MultiSelect = true;
@@ -258,6 +265,17 @@ namespace SISCONVAL
 
 
            
+        }
+
+        private void prescribirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("PENDIENTE DE ELIMINAR EL BOTON, SI QUIERES PRESCRIBIR GO TO PR, E INFORMA A MASP PARA LA ELIMINACION DE ESTA BOTON, Q ME ESTA HACIENDO PERDER EL TIEMPO LEYENDO TODO ESTE TEXTO SALUDOS");
+        }
+
+        private void pRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Prescripcion pres = new Prescripcion(pOperador, pIdCiudadano);
+            pres.Show();
         }
     }
 }

@@ -249,4 +249,30 @@
     <Parameter Name="FAOPERADOR" Parameter="fAOPERADOR" Type="System.String" DbType="VarChar(10)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.PA_CONTROLDEUDA_PRESCRIPCION" Method="PA_CONTROLDEUDA_PRESCRIPCION">
+    <Parameter Name="FAIDCIUDADANO" Parameter="fAIDCIUDADANO" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="FAIDCONCEPTO" Parameter="fAIDCONCEPTO" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="FNANIODESDE" Parameter="fNANIODESDE" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNANIOHASTA" Parameter="fNANIOHASTA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FAOPERADOR" Parameter="fAOPERADOR" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PA_CONTROLDEUDA_PRESCRIPCION_VER" Method="PA_CONTROLDEUDA_PRESCRIPCION_VER">
+    <Parameter Name="FAIDCIUDADANO" Parameter="fAIDCIUDADANO" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="FAIDCONCEPTO" Parameter="fAIDCONCEPTO" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="FNANIODESDE" Parameter="fNANIODESDE" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FNANIOHASTA" Parameter="fNANIOHASTA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FAOPERADOR" Parameter="fAOPERADOR" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="PA_CONTROLDEUDA_PRESCRIPCION_VERResult">
+      <Column Name="IdDeuda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCiudadano" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdConcepto" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Deuda" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Pagado" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Saldo" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Coactiva" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

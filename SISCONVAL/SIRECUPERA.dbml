@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SIRecupera" Class="SIRECUPERADataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.28\SQLMDW28;Initial Catalog=SIRecupera;Persist Security Info=True;User ID=sa" SettingsObjectName="SISCONVAL.Properties.Settings" SettingsPropertyName="SIRecuperaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Deuda" Member="Deuda">
+    <Type Name="Deuda">
+      <Column Name="IdDeuda" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdFacturaciónMensual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdCiudadano" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdConcepto" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdPropiedad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaFacturación" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AplicaIPM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AplicaTIM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Deuda" Member="Deuda1" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Pagado" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Saldo" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Coactiva" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.String" DbType="NChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaCreación" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="FechaModificación" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Codicontri" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BaseImponible" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Detalle" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IdPredio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdPredioUr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Embargado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IdConstrucción" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdArbitrio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

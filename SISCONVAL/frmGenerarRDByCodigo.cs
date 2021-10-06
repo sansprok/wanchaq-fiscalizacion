@@ -24,7 +24,7 @@ namespace SISCONVAL
         {
             /*recuperando parametros externos*/
           //  string[] passeid = Environment.GetCommandLineArgs();
-         /*   pIdCiudadano = passeid.GetValue(1).ToString();
+          /*pIdCiudadano = passeid.GetValue(1).ToString();
             pAnioTribu = passeid.GetValue(2).ToString();
             pOperador = passeid.GetValue(3).ToString();*/
 
